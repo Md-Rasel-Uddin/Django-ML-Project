@@ -1,0 +1,112 @@
+{% load static %}
+<html>
+ <head>
+   <tittle></tittle>
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/my.css' %}">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+ </head>   
+
+<section id="nav-bar">
+   
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="{% url 'home' %}"><h2 style="color: #fff;">Go to home</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'home' %}">HOME</a>
+     </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+
+<!--------------------------banner section------------------>
+
+
+<div class="container-fluid" class="ml-auto">
+    <div class="row">
+
+
+      <div class="col">
+
+
+        <br>
+
+        <section>
+
+                 
+            <form method="post" enctype="multipart/form-data" action="predictImage">
+        
+        
+                <h2>The Prediction of the Image is <b style="color: red;">  {{predictedLabel}} </b></h2>
+                <br>
+                <center> <img src="media/{{filePathName}}" alt='image name' width="300" height="400"></center>
+                
+        
+            </form>
+            <br>
+        </section>
+
+
+
+        
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<section id="banner">
+    <div class="container">
+       
+      <div class="row">
+      
+     
+      </div>
+      <div class="col-md-6 text-center">
+         
+      </div>
+      </div> 
+    </div>
+    
+</section>
+
+
+
+<!----------------------Services Section----------------->
+
+
+<!----------About Us------->
+
+
+
+<!--------------Testimonials------------>
+
+
+<!--------------Social Media Section------------------>
+
+ 
+
+
+<!------------------footer section---------------->
+
+<!-------------smooth scroll------------>
+<script src="{% static 'smooth-scroll.js' %}"></script>
+<script>var scroll = new smoothscroll('a[href*="#"]')</script>
+</body>
+</html>
