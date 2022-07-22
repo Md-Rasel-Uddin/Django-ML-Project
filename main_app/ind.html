@@ -1,0 +1,279 @@
+{% load static %}
+<html>
+ <head>
+   <tittle>Skin Diseases Recognition</tittle>
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/my.css' %}">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+ </head>   
+
+<section id="nav-bar">
+   
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#"><h2 style="color: #fff;">Skin Disease Recognition</h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#lop">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#services">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about-us">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#testimonials">TESTIOMONIALS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#footer">CONTACT US</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+
+<!--------------------------banner section------------------>
+
+
+<div class="container-fluid" class="ml-auto">
+    <div class="row">
+
+
+      <div style="text-align:left ;" class="col" class="ml-auto" class="bg-light d-flex justify-content-between">
+
+        <br>
+        <h3 style="text-align:left ;">Select Symptoms to classify diseases:</h3>
+        <br>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">itching</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">skin_rash</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">nodal_skin_eruptions(disabled)</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">continuous_sneezing</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">shivering</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">chills(disabled)</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">joint_pain</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">stomach_pain</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">acidity(disabled)</label>ulcers_on_tongue
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">ulcers_on_tongue</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">muscle_wasting</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">vomiting(disabled)</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">spotting_ urination</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">fatigue</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">weight_gain(disabled)</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">anxiety</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">mood_swings</label>
+        </div>
+        <div class="form-check form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">weight_loss(disabled)</label>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Predict" style="margin-top: 10%; background:  #00cc00; padding-left: 10px;padding-right: 10px" >
+
+
+      </div>
+
+
+
+
+      <div class="col">
+
+
+
+
+        <section>
+
+            <br>
+          
+            <h3>Upload Image for Classification</h3>
+                
+            <br>
+        
+            <form method="post" enctype="multipart/form-data" action="predictImage">
+        
+                {% csrf_token %}
+                <div class="col-md-4 col-sm-4">
+                    <label for="fname">✅Upload Image File Here:</label>   
+                    <input name="filePath" type="file">
+                    
+                    <input type="submit" value="Submit" style="margin-top: 10%; background:  #00cc00; padding-left: 10px;padding-right: 10px" >
+                </div>
+                <br>
+        
+                <h2>The classification of the image is {{predictedLabel}}</h2>
+                <img src={{filePathName}} alt='imagenameTest' width="300" height="400">
+                
+        
+            </form>
+            <br>
+        </section>
+
+
+
+        
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<section id="banner">
+    <div class="container">
+       
+      <div class="row">
+      
+      <div class="col-md-6">
+          <p class="promo-tittle">Monitoring in skin diseases </p>
+          <P>Skin disorders vary greatly in symptoms and severity. They can be temporary or permanent, and may be painless or painful. Some have situational causes, while others may be genetic. Some skin conditions are minor, and others can be life-threatening.
+
+While most skin disorders are minor, others can indicate a more serious issue. Contact your doctor if you think you might have one of these common skin problems.</P>
+
+  
+        <a href="#"><img src="{% static 'images/home3.jpg' %}" class="play-btn">watch tutorials</a>
+      </div>
+      <div class="col-md-6 text-center">
+          <img src="{% static 'images/home3.jpg' %}" class="img-fluid">
+      </div>
+      </div> 
+    </div>
+    
+</section>
+
+
+
+<!----------------------Services Section----------------->
+
+
+<!----------About Us------->
+
+
+
+<!--------------Testimonials------------>
+
+
+<!--------------Social Media Section------------------>
+<section id="social-media">
+  <div class="container text-center">
+    <p>FIND US ON SOCIAL MEDIA</p>
+     <div class="social-icons">
+        <a href="#"><img src="{% static 'images/facebook-icon.png' %}"></a>
+        <a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a>
+        <a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a>
+        <a href="#"><img src="{% static 'images/whatsapp-icon.png' %}"></a>
+        <a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a>
+        <a href="#"><img src="{% static 'images/snapchat-icon.png' %}"></a>
+     </div>
+  </div>
+</section>
+
+
+<!------------------footer section---------------->
+<section id="footer">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-box">
+                <img src="{% static 'images/demo-logo.png' %}">
+                <p>Subscribe  youtube channel to watch more videos this topic</p>
+            </div>
+            <div class="col-md-4 footer-box">
+                <p><b>CONTACT US</b></p>
+                <P><i class="fa fa-map-marker"></i>WORLD TRADE CENTRE,BANGLADESH</P>
+                
+                <P><i class="fa fa-phone"></i> +1 0123456789</P>
+                
+                <P><i class="fa fa-envelope-o"></i>XYZ@GMAIL.COM</P>
+
+            </div>
+            
+             <div class="col-md-4 footer-box">
+             <p><b>SUBSCRIBE NEWSLETTER</b></p>
+             
+             <INPUT TYPE="email" class="form-control" placeholder="your email">
+             
+             <button type="button" class="btn 
+               btn-primary">subscrive</button>
+                
+               </div>  
+               
+           </div> 
+           
+            <hr>
+            <p class="copyright">Website created by AHNAF TAHMID HASAN</p>         
+    </div>
+    
+</section>
+<!-------------smooth scroll------------>
+<script src="{% static 'smooth-scroll.js' %}"></script>
+<script>var scroll = new smoothscroll('a[href*="#"]')</script>
+</body>
+</html>
